@@ -1,0 +1,27 @@
+{
+    "alias": "console.phar",
+    "chmod": "0755",
+    "directories": ["src"],
+    "files": [
+        "vendor/herrera-io/json/src/lib/json_version.php",
+        "vendor/herrera-io/phar-update/src/lib/constants.php",
+        "vendor/phpseclib/phpseclib/phpseclib/Crypt/Random.php"
+    ],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": [
+                "herrera-io",
+                "kherge",
+                "phpseclib",
+                "phpunit",
+                "Tests",
+                "yaml"
+            ],
+            "in": "vendor"
+        }
+    ],
+    "main": "console",
+    "output": "etl.phar",
+    "stub": true
+}

@@ -1,0 +1,18 @@
+{
+    "name": "funkyproject/symfony-cli-distribution",
+    "require-dev": {
+        "kherge/box": "~2.0"
+    },
+    "require": {
+        "symfony/console": "@stable",
+        "doctrine/dbal": "2.3.*",
+        "symfony/finder": "@stable",
+        "pimple/pimple": "@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funkyproject\\": "src/"
+        }
+    },
+    "target-dir": "Funkyproject"
+}
