@@ -14,6 +14,7 @@ namespace Funkyproject\Service;
 
 interface ServiceInterface 
 {
-    public function getName();
+    public static function getName();
 
+    public static function build();
 } 

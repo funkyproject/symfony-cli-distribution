@@ -18,6 +18,14 @@ class Application extends BaseApplication
 {
     private $container;
 
+
+    public function __construct(\Pimple $container, $name = 'UNKNOWN', $version = 'UNKNOWN')
+    {
+        parent::__construct($name, $version);
+
+        $this->setContainer($container);
+    }
+
     public function setContainer(\Pimple $container)
     {
         $this->container = $container;
@@ -26,22 +34,7 @@ class Application extends BaseApplication
 
     protected function getDefaultCommands()
     {
-
         $commands = array();
-
-        $finder = Finder::create()->files()
-            ->name('*Command.php')
-            ->in(__DIR__.'/Command');
-
-        foreach($finder as $file) {
-            $className = 'Funkyproject\\Command\\'.str_replace('.php','',$file->getFilename());
-
-            $commands[] = $command = new $className;
-
-            if($command instanceof Command\ContainerAwareInterface) {
-                $command->setContainer($this->container);
-            }
-        }
 
         return array_merge(
             parent::getDefaultCommands(),

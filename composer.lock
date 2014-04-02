@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "f697f3a6cbd0c73403b454557f68b31d",
+    "hash": "1c8d245b5a9a8febd2708fd7d496354e",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -473,6 +473,33 @@
                 "parser"
             ],
             "time": "2013-01-12 18:59:04"
+        },
+        {
+            "name": "funkyproject/reflection-file",
+            "version": "dev-master",
+            "target-dir": "Funkyproject",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/funkyproject/reflection-file.git",
+                "reference": "510ea763ac7416c623d638a76b6102a3d057df8c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/funkyproject/reflection-file/zipball/510ea763ac7416c623d638a76b6102a3d057df8c",
+                "reference": "510ea763ac7416c623d638a76b6102a3d057df8c",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Funkyproject": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "time": "2014-04-02 12:28:11"
         },
         {
             "name": "pimple/pimple",
@@ -1407,7 +1434,8 @@
     "stability-flags": {
         "symfony/console": 0,
         "symfony/finder": 0,
-        "pimple/pimple": 0
+        "pimple/pimple": 0,
+        "funkyproject/reflection-file": 20
     },
     "platform": [
 
